@@ -8,3 +8,13 @@
     }
 }
 
+@media only screen and (max-width: 600px){
+    
+    #lastname{
+        margin-right: 5px;
+    }
+
+    #password{
+        margin-right: 5px;
+    }
+}

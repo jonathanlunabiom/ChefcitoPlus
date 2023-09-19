@@ -1,6 +1,6 @@
 // Import necessary dependencies and models
 const router = require("express").Router();
-const { Post, User } = require("../models");
+const { Recipe, User } = require("../models");
 const withAuth = require("../utils/auth");
 
 // Define a route to render the homepage
