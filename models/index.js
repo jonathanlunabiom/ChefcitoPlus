@@ -1,6 +1,7 @@
 const User = require('./User');
-const RecipeReviews = require('./RecipeReviews');
 const FavoriteRecipes = require('./FavoriteRecipes');
+const Recipe = require('./Recipe');
+const RecipeReviews = require('./RecipeReviews');
 
 User.hasMany(FavoriteRecipes, {
     foreignKey: 'user_id',
@@ -10,5 +11,16 @@ User.hasMany(FavoriteRecipes, {
 FavoriteRecipes.belongsTo(User, {
     foreignKey: 'user_id',
 });
+
+Recipe.hasMany(RecipeReviews, {
+    foreignKey: 'recipe_id',
+    onDelete: 'CASCADE'
+});
+
+RecipeReviews.belongsTo(Recipe, {
+    foreignKey: 'recipe_id',
+})
+
+
 
 module.exports = { User, RecipeReviews, FavoriteRecipes };
