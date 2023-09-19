@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS chefsito_db;
+
+CREATE DATABASE chefsito_db;
