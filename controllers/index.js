@@ -1,8 +1,11 @@
+// Create an Express router instance
 const router = require("express").Router();
+
+// Import routes for the dashboard, home, and API
 const homeRoutes = require("./homeRoutes");
-// const apiRoutes = require("./api");
 
+// Define route handlers for different URL paths
 router.use("/", homeRoutes);
-// router.use("/api", apiRoutes);
 
+// Export the router for use in the application
 module.exports = router;
