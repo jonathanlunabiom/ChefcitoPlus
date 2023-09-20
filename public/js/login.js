@@ -1,4 +1,5 @@
-document.querySelector("#btnlogin").addEventListener("click", async () => {
+document.querySelector("#btnlogin").addEventListener("click", async (e) => {
+  e.preventDefault();
   const email = document.querySelector("#email").value.trim();
   const password = document.querySelector("#password").value.trim();
 
@@ -11,7 +12,7 @@ document.querySelector("#btnlogin").addEventListener("click", async () => {
 
     if (response.ok) {
       // If successful, redirect the browser to the profile page
-      document.location.replace("/profile");
+      document.location.replace("/dashboard");
     } else {
       alert(response.statusText);
     }
