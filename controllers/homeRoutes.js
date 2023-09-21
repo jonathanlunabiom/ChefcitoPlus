@@ -21,6 +21,13 @@ router.get("/dashboard", withAuth, async (req, res) => {
     })
 
     const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
+
+    for (i = 0; i < recipes.length; i++) {
+      if (recipes[i].userRecipe_id === req.session.user_id) {
+        recipes[i].flag = true;
+      }
+    }
+    console.log(recipes)
     res.render('dashboard', { recipes, logged_in: req.session.logged_in })
   } catch (error) {
     res.status(500).json(error.message)
