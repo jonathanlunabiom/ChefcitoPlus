@@ -1,0 +1,33 @@
+[
+    {
+        "recipe_name": "Banana Bread",
+        "ingredients": "Flour: All-purpose flour gives the banana bread structure.
+        · Baking soda: Baking soda acts as a leavener, which means it helps the banana bread rise.
+        · Salt: A pinch of salt enhances the overall flavor, but it won't make the loaf taste salty.
+        · Butter: A stick of butter lends richness, moisture, and irresistible flavor.
+        · Brown sugar: Brown sugar sweetens things up and adds a hint of warmth.
+        · Eggs: Eggs act as a binding agent, which means they hold the batter together.
+        · Bananas: Of course, you'll need bananas! Choose overripe bananas.",
+        "recipe": " You'll find the full, step-by-step recipe below — but here's a brief overview of what you can expect when you make this simple banana bread:
+        1. Combine the dry ingredients in one bowl.
+        2. Beat the butter and sugar in another bowl. Add the eggs and mashed bananas.
+        3. Add the wet mixture to the dry mixture.
+        4. Pour the batter into a loaf pan and bake in a preheated oven.",
+        "image": "",
+        "user_id": ""
+    },
+    {
+        "recipe_name": "",
+        "ingredients": "",
+        "recipe": "",
+        "image": "",
+        "user_id": ""
+    },
+    {
+        "recipe_name": "",
+        "ingredients": "",
+        "recipe": "",
+        "image": "",
+        "user_id": ""
+    }
+]
