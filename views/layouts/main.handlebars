@@ -17,13 +17,12 @@
             <h1 class="text-4xl">Chefcito+</h1>
         </div>
         {{#if logged_in}}
-        <button class=" bg-slate-400 text-base text-white rounded-lg absolute top-5 right-11 px-2 py-1" style="font-family: Arial, Helvetica, sans-serif;" id="btn">Log out</button>
+        <button class=" bg-slate-400 text-sm text-white rounded-lg absolute top-6 right-11 px-2 py-1 text" style="font-family: Arial, Helvetica, sans-serif;" id="btn">Log out</button>
         {{/if}}
     </header>
     <main>
         {{{body}}}
     </main>
-
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}

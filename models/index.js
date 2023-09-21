@@ -23,4 +23,4 @@ RecipeReviews.belongsTo(Recipe, {
 
 
 
-module.exports = { User, RecipeReviews, FavoriteRecipes };
+module.exports = { User, RecipeReviews, FavoriteRecipes, Recipe };

@@ -17,7 +17,7 @@
 //             method: 'GET',
             
 //         })
-//         const datajson = res.json();
+//         const datajson = await res.json();
     
 //         console.log(datajson)
 //     }catch(err){
@@ -26,11 +26,11 @@
 // }
 
 
-fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey=b162409610ec4b79aee5fcaee180b7b0") //1
-  .then((response) => response.json()) //2
-  .then((user) => {
-    console.log(user.results[0].image); //3
-});
+// // fetch("https://api.spoonacular.com/recipes/complexSearch?apiKey=b162409610ec4b79aee5fcaee180b7b0") //1
+// //   .then((response) => response.json()) //2
+// //   .then((user) => {
+// //     console.log(user.results[0].image); //3
+// // });
 
 // fetchData();
 
