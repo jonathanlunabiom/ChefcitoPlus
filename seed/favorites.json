@@ -1,0 +1,10 @@
+[
+    {
+        "recipe_name":"Coco",
+        "userFavorite_id": 2
+    },
+    {
+        "recipe_name":"Coca",
+        "userFavorite_id": 1
+    }
+]

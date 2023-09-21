@@ -4,8 +4,6 @@ document.querySelector('#allrecipe').addEventListener('click', async (e)=>{
     if(e.target.innerHTML === '♥ Add favorites!'){
         recipe_name = e.target.getAttribute("id")
 
-        console.log(recipe_name)
-
         const res = await fetch('/api/recipe/favorites',{
             method: "POST",
             body: JSON.stringify({ recipe_name }),
