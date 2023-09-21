@@ -1,12 +1,12 @@
 const router = require('express').Router();
-const { Recipe } = require('../../models');
+const { Recipe , FavoriteRecipes } = require('../../models');
 
 router.post('/', async (req, res) => {
     try {
-        console.log(req.image)
+        console.log(req.body)
         const newRecipe = await Recipe.create({
             ...req.body,
-            user_id: req.session.user_id,
+            userRecipe_id: req.session.user_id,
         });
 
         res.status(200).json(newRecipe);
@@ -20,7 +20,6 @@ router.delete('/:id', async (req, res) => {
         const recipeData = await Recipe.destroy({
             where: {
                 id: req.params.id,
-                user_id: req.session.user_id,
             },
         });
 
@@ -34,5 +33,19 @@ router.delete('/:id', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+router.post('/favorites', async (req,res) => {
+    try{
+        const favoriteData = await FavoriteRecipes.create({
+            recipe_name: req.body.recipe_name,
+            userFavorite_id: req.session.user_id
+        })
+        console.log(favoriteData)
+        res.status(200).json(favoriteData)
+
+    }catch(err){
+        res.status(500).json(err);
+    }
+})
 
 module.exports = router;

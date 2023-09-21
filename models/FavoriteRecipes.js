@@ -7,10 +7,15 @@ FavoriteRecipes.init(
   {
     id: {
       type: DataTypes.INTEGER,
+      autoIncrement: true,
       allowNull: false,
       primaryKey: true,
     },
-    user_id: {
+    recipe_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    userFavorite_id: {
       type: DataTypes.INTEGER,
       references: {
         model: "user",

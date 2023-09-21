@@ -4,12 +4,12 @@ const Recipe = require('./Recipe');
 const RecipeReviews = require('./RecipeReviews');
 
 User.hasMany(FavoriteRecipes, {
-    foreignKey: 'user_id',
+    foreignKey: 'userFavorite_id',
     onDelete: 'CASCADE'
 });
 
 FavoriteRecipes.belongsTo(User, {
-    foreignKey: 'user_id',
+    foreignKey: 'userFavorite_id',
 });
 
 Recipe.hasMany(RecipeReviews, {

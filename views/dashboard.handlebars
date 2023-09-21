@@ -3,9 +3,9 @@
     <div class="my-5"> 
         <a class="text-white text-sm bg-gray-600 p-2 rounded-lg my-4" href="/newRecipe">➕ New Post</a>
     </div>
-    <div class="flex flex-col items-center justify-center">
+    <div class="flex flex-col items-center justify-center" id="allrecipe">
         {{#each recipes as |recipe|}}
-            <div class="bg-white mt-2 w-2/4 p-4 rounded-md" id="{{user_id}}">
+            <div class="bg-white mt-2 w-2/4 p-4 rounded-md">
                 <h1 class="border-b-2 border-gray-400 mb-2 pb-2">{{recipe.recipe_name}}</h1>
                 <p class="text-sm"> <strong>Ingredients:</strong>
                     {{recipe.ingredients}}
@@ -15,9 +15,16 @@
                 </p>    <strong></strong>
                 <img src="{{recipe.image}}" alt="image of a recipe" class="mt-1">
                 <div class="border-2 w-24 mx-auto mt-2 border-stone-700 rounded-sm">
-                    <button class="text-xs">&#9829; Add favorites!</button>
+                    <button class="text-xs" id="{{recipe.recipe_name}}">&#9829; Add favorites!</button>
                 </div>
+                {{#if recipe.flag}}
+                <div class="border-stone-700 rounded-sm border-2 mt-3 w-24 mx-auto">
+                    <button class="deletebtn text-xs" id="{{recipe.id}}">Delete recipe</button>
+                </div>
+                {{/if}}
             </div>
         {{/each}}
     </div>
 </div>
+
+<script src="/js/recipeManager.js"></script>
