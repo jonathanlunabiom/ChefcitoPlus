@@ -3,8 +3,21 @@ document.querySelector("#btnSaveRecipe").addEventListener("click", async (e) => 
     const recipe_name = document.querySelector("#recipe_name").value.trim();
     const ingredients = document.querySelector("#ingredients").value.trim();
     const recipe = document.querySelector("#recipe").value.trim();
+    const image = document.querySelector("#image").value.trim();
 
-    if (recipe_name && ingredients && recipe) {
+    if (recipe_name && ingredients && recipe && image) {
+        const response = await fetch(`/api/recipe`, {
+            method: "POST",
+            body: JSON.stringify({ recipe_name, ingredients, recipe,image }),
+            headers: { "Content-Type": "application/json" },
+        });
+
+        if (response.ok) {
+            document.location.replace("/dashboard");
+        } else {
+            alert(response.statusText);
+        }
+    } else if (recipe_name && ingredients && recipe){
         const response = await fetch(`/api/recipe`, {
             method: "POST",
             body: JSON.stringify({ recipe_name, ingredients, recipe }),
@@ -16,7 +29,7 @@ document.querySelector("#btnSaveRecipe").addEventListener("click", async (e) => 
         } else {
             alert(response.statusText);
         }
-    } else {
+    }else{
         alert("Complete all the datafields");
     }
 });

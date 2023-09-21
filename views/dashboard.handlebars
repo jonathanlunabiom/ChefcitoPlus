@@ -1,16 +1,23 @@
-<div class="text-center bg-slate-400">
-  <h1 class="text-3xl text-white"><a href="/dashboard">Your Dashboard</a></h1>
-  {{#each recipes as |recipe|}}
-  <div>
-    <h1>{{recipe.recipe_name}}</h1>
-    <p>Ingredientes:
-      {{recipe.ingredients}}
-    </p>
-    <p>Preparacion:
-      {{recipe.recipe}}
-    </p>
-
-  </div>
-  {{/each}}
-  <a class="text-white" href="/newRecipe">➕ New Post</a>
+<div class="text-center bg-slate-400 p-4">
+    <h1 class="text-xl text-white"><a href="/dashboard">Your Dashboard</a></h1>
+    <div class="my-5"> 
+        <a class="text-white text-sm bg-gray-600 p-2 rounded-lg my-4" href="/newRecipe">➕ New Post</a>
+    </div>
+    <div class="flex flex-col items-center justify-center">
+        {{#each recipes as |recipe|}}
+            <div class="bg-white mt-2 w-2/4 p-4 rounded-md" id="{{user_id}}">
+                <h1 class="border-b-2 border-gray-400 mb-2 pb-2">{{recipe.recipe_name}}</h1>
+                <p class="text-sm"> <strong>Ingredients:</strong>
+                    {{recipe.ingredients}}
+                </p>
+                <p class="text-sm"><strong>Preparation:</strong>
+                    {{recipe.recipe}}
+                </p>    <strong></strong>
+                <img src="{{recipe.image}}" alt="image of a recipe" class="mt-1">
+                <div class="border-2 w-24 mx-auto mt-2 border-stone-700 rounded-sm">
+                    <button class="text-xs">&#9829; Add favorites!</button>
+                </div>
+            </div>
+        {{/each}}
+    </div>
 </div>
