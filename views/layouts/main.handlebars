@@ -12,18 +12,31 @@
 </head>
 <body>  {{!--flex justify-center content-center text-center p-4 --}}
     <header class="bg-blue-200 p-4 static">
+        {{#if logged_in}}
+        <div>
+            <button class="absolute top-6 left-11 border-2 border-pink-500 px-2 rounded-xl"><a href="/favorites">Favorites</a></button> 
+        </div>
+        {{/if}}
         <div class="flex content-center justify-center align-middle text-center">
             <img src="/assets/img/dish.png" alt="dish-image" class="w-5 h-5 "> 
             <h1 class="text-4xl">Chefcito+</h1>
         </div>
         {{#if logged_in}}
-        <button class=" bg-slate-400 text-base text-white rounded-lg absolute top-5 right-11 px-2 py-1" style="font-family: Arial, Helvetica, sans-serif;" id="btn">Log out</button>
+        <button class=" bg-slate-400 text-sm text-white rounded-lg absolute top-6 right-11 px-2 py-1" style="font-family: Arial, Helvetica, sans-serif;" id="btn">Log out</button>
         {{/if}}
     </header>
     <main>
         {{{body}}}
     </main>
 
+    <footer class="bg-gray-800 flex justify-between items-center p-7 h-24">
+        <div>
+            <span class="text-white text-xs">&#9400; 2023 Copyright Company.</span>
+        </div>
+        <div>
+            <span class="text-white text-xs">contactchefcito@gmail.com</span>
+        </div>
+    </footer>
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}

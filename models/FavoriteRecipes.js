@@ -5,12 +5,11 @@ class FavoriteRecipes extends Model {}
 
 FavoriteRecipes.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
+    recipe_name: {
+      type: DataTypes.STRING,
       allowNull: false,
-      primaryKey: true,
     },
-    user_id: {
+    userFavorite_id: {
       type: DataTypes.INTEGER,
       references: {
         model: "user",

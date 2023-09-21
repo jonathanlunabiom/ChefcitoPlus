@@ -1,0 +1,23 @@
+[
+    {
+        "recipe_name": "Banana Bread",
+        "ingredients": "Flour, Baking soda, Salt,Butter, Brown Sugar, Eggs, Bananas.",
+        "recipe": "Mix all ingredients and bake it around 350F.",
+        "image": "https://images.unsplash.com/photo-1569762404472-026308ba6b64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80",
+        "userRecipe_id": 2
+    },
+    {
+        "recipe_name": "Sushi",
+        "ingredients": "Tuna, Rice, Vinegar, Nori",
+        "recipe": "Cook the rice until ready and add an spoon of vinegar. Spread the rice, add the tuna an roll it tightly",
+        "image": "https://images.unsplash.com/photo-1580822184713-fc5400e7fe10?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80",
+        "userRecipe_id": 1
+    },
+    {
+        "recipe_name": "Cereal with milk",
+        "ingredients": "Milk, Cereal",
+        "recipe": "Mix all ingredients into a bowl, enjoy",
+        "image": "https://images.unsplash.com/photo-1614961234274-f204d01c115e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80",
+        "userRecipe_id": 3
+    }
+]
