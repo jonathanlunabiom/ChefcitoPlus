@@ -23,7 +23,11 @@ Recipe.init(
             type: DataTypes.TEXT,
             allowNull: false,
         },
-        user_id: {
+        image: {
+            type: DataTypes.STRING,
+            allowNull: true
+        },
+        userRecipe_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {

@@ -3,7 +3,7 @@ const { Recipe } = require('../../models');
 
 router.post('/', async (req, res) => {
     try {
-        console.log(req.body);
+        console.log(req.image)
         const newRecipe = await Recipe.create({
             ...req.body,
             user_id: req.session.user_id,
@@ -25,7 +25,7 @@ router.delete('/:id', async (req, res) => {
         });
 
         if (!recipeData) {
-            res.status(404).json({ message: 'No se encontro receta con el id: ' + req.params.id });
+            res.status(404).json({ message: 'Recipe not found: ' + req.params.id });
             return;
         }
 

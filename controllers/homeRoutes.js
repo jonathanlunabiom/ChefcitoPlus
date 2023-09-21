@@ -21,14 +21,18 @@ router.get("/dashboard", withAuth, async (req, res) => {
     })
 
     const recipes = recipeData.map((recipe) => recipe.get({ plain: true }));
-    res.render('dashboard', { recipes })
+    res.render('dashboard', { recipes, logged_in: req.session.logged_in })
   } catch (error) {
     res.status(500).json(error.message)
   }
 });
 
-router.get("/newRecipe", (req, res) => {
+router.get("/newRecipe", withAuth,(req, res) => {
   res.render("newRecipe");
 });
+
+router.get("/favorites",withAuth,(req,res)=>{
+  res.render("favorites");
+})
 
 module.exports = router;

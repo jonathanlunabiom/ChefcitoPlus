@@ -21,6 +21,15 @@ RecipeReviews.belongsTo(Recipe, {
     foreignKey: 'recipe_id',
 })
 
+User.hasMany(Recipe, {
+    foreignKey: 'userRecipe_id',
+    onDelete: 'CASCADE'
+});
+
+Recipe.belongsTo(User,{
+    foreignKey: 'userRecipe_id'
+})
 
 
-module.exports = { User, RecipeReviews, FavoriteRecipes };
+
+module.exports = { User, RecipeReviews, FavoriteRecipes, Recipe };
