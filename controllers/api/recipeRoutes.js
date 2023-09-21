@@ -40,7 +40,6 @@ router.post('/favorites', async (req,res) => {
             recipe_name: req.body.recipe_name,
             userFavorite_id: req.session.user_id
         })
-        console.log(favoriteData)
         res.status(200).json(favoriteData)
 
     }catch(err){

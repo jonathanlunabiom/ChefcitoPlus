@@ -5,12 +5,6 @@ class FavoriteRecipes extends Model {}
 
 FavoriteRecipes.init(
   {
-    id: {
-      type: DataTypes.INTEGER,
-      autoIncrement: true,
-      allowNull: false,
-      primaryKey: true,
-    },
     recipe_name: {
       type: DataTypes.STRING,
       allowNull: false,
