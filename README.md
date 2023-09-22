@@ -46,6 +46,12 @@ Chefcito+ is built using the following technologies:
 
 ## Screenshot
 
+![Movie Planner Screenshot](./public/assets/img/Screenshot.png)
+
+## Webpage
+
+[Chefcito+](https://chefcitoplus-120634983b56.herokuapp.com/)
+
 ## License
 
 Chefcito+ was release under the [MIT License](https://opensource.org/licenses/MIT).
